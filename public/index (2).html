@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkWizard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Madimi+One&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+    body {
+     
+      padding: 10px;
+      background-color: black;
+      background-image: url('bg.jpeg');
+      background-repeat: no-repeat;
+      /* background-size:cover;
+      background-position: center; */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+
+      width: 100vw;
+      align-items: center;
+      background-color: #00000000;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* border: 1px solid white; */
+    }
+
+
+    .navbar-logo {
+
+      float: left;
+      padding: 10px 60px;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+
+    .navbar-links {
+      float: right;
+    }
+
+    .navbar-links ul {
+      margin: 0;
+      font-size: 16px;
+      padding-top: 10px;
+      list-style-type: none;
+    }
+
+    .navbar-links ul li {
+      display: inline-flex;
+    }
+
+    .navbar-links ul li a {
+      display: inline-block;
+      font-size: 20px;
+      padding: 30px;
+      padding-top: 20px;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.704);
+    }
+
+    .navbar-links ul li a:hover {
+      padding: 30px;
+      padding-top: 20px;
+      color: #009cbb;
+      /* text-decoration: underline; */
+    }
+
+    .home {
+      font-weight: bold;
+    }
+
+    .loginsignup {
+      height: 40px;
+      width: 150px;
+      font-size: 17px;
+      border: 1px solid #00acd7;
+      background-color: #009cbb;
+      border-radius: 10px;
+      color: white;
+      margin-right: 60px;
+    }
+
+   .loginsignup a:hover{
+    color: #009cbb;
+   }
+
+    .contentup {
+      width: 45vw;
+      height: 200px;
+      position: absolute;
+      margin-top: 250px;
+      color: white;
+      display: inline-block;
+      font-size: 80px;
+      font-weight: bolder;
+      padding: 60px;
+      padding-top: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .getstarted {
+      position: relative;
+      width: 100px;
+      left: 0%;
+      border-radius: 20px;
+      padding: 10px;
+      top: 20%;
+      border: 1px solid #00acd7;
+      background-color: #009cbb;
+
+    }
+
+    .buttongetstarted {
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+
+    }
+
+    .smallcontent {
+      font-size: 15px;
+      font-weight: lighter;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #b9b4b4;
+      padding-top: 30px;
+    }
+
+    .withAI {
+      color: #00acd7;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .contentside {
+      margin-left: 900px;
+      margin-top: 150px;
+      
+    }
+    .footer{
+      background-color: black;
+      height: 200px;
+      margin-top: 900px ;
+      color: white;
+      width: 100vw;
+      margin-left: -18px;
+      /* background: #000000; */
+      padding: 20px 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+    
+.menu {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,.menu__item {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  /* margin: 0 10px; */
+  transition: 0.5s;
+  flex-wrap: wrap;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  /* height: 50vh; */
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="#" class="navbar-logo"> <img height="90px" width="150px" src="work wizard.jpg" alt=""></a>
+    <div class="navbar-links">
+      <ul>
+        <li class="home"><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="login.html"><button class="loginsignup"> Login/SignUp </button></a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="content">
+
+    <div class="contentup">
+      Effortless Task <br> Management. <div class="withAI">With AI</div>
+      <div class="smallcontent">With WorkWizard unlock a new era of task management excellence. <br>
+        Effortlessly empowering your team to achieve unparalleled productivity.
+        <br>
+
+
+      </div>
+      <button class="getstarted">
+        <a class="buttongetstarted" href="main.html">Get Started</a>
+      </button>
+    </div>
+    <!-- <img class="contentside" src="sd5.png"> -->
+  </div>
+
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy; 2024 Work Wizard | All Rights Reserved</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    document.getElementsByClassName(Contact)
+  </script>
+
+
+</body>
+</html>
