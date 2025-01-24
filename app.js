@@ -4,29 +4,25 @@ const bodyParser = require('body-parser'); // Import body-parser module
 const { Client } = require("@notionhq/client")
 
 
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 
-const API_URL = "https://api.openai.com/v1/chat/completions";
-const API_KEY = "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";
+// const API_URL = "https://api.openai.com/v1/chat/completions";
+// const API_KEY = "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";
 
 const app = express();
 const port = 5000;
 const notion = new Client({
-    auth: "secret_gqGwAywvqtWzkdyd9gED0wNOFWTvqTlkqUaWX6S0kHo",
+    auth: "secret_p8ixPYOQsnftAXxEKXHOn3DgzACGQW51xEmiG1i7O76",
 });
 
 
-// Parse URL-encoded bodies (as sent by HTML forms)
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Parse JSON bodies (as sent by API clients)
 app.use(bodyParser.json());
 
 
-// Serve static files from the 'public' folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Route handler for the root '/' endpoint
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
@@ -38,7 +34,6 @@ app.post('/submit-form',async (req, res) => {
     var listOfMemberData = [];
     var employees = [];
 
-    // Iterate over the keys of formData object
     for (var fieldName in formData) {
         var fieldValue = formData[fieldName];
 
@@ -74,7 +69,6 @@ app.post('/submit-form',async (req, res) => {
     console.log(listOfMemberData);
 
   await  alertMe(listOfMemberData)
-    // Perform actions with form data as needed
     res.send('Form submitted successfully!');
 });
 
@@ -112,29 +106,11 @@ const aiArray = [];
 // aiArray.push(aiData);
 // aiArray.push(aiData);
 
-
-
-
-
-
-
-
 async function alertMe(employees) {
-
-
-
-
-
-
 console.log(employees)
 await createNotionPagesForAllMembers(employees)
 
 }
-
-
-
-
-
 async function createNotionPagesForMember(member) {
 try{
     console.log("lookforThis")
@@ -142,7 +118,7 @@ try{
     const data = {
         parent: {
             type: "database_id",
-            database_id: "536af542c8544d778ffc5bee4e1977c2", // Replace with your Notion database ID
+            database_id: "536af542c8544d778ffc5bee4e1977c2", 
         },
         properties: {
             Name: {
@@ -217,15 +193,18 @@ console.error('Error creating Notion page:', error);
 
 }
 
-
+async function alertMe(employees) {
+    for (const member of employees) {
+      await createNotionPagesForMember(member);
+      await sleep(300); // Add a delay between requests to avoid rate limits
+    }
+    console.log('Operation complete.');
+  }
 
 
 async function createNotionPagesForAllMembers(memberData) {
-
-
 console.log("working")
 console.log(memberData[0].name)
-
 
 for (const member of memberData) {
 await createNotionPagesForMember(member);

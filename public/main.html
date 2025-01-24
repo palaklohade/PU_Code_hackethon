@@ -266,7 +266,7 @@ document.getElementById("submitButton").addEventListener("click", function (even
     document.getElementById("user-input").value = "";
     document.getElementById("numEmployees").value = "";
     document.getElementById("employeeFields").innerHTML = "";
-  
+    dataList[selectedDiv]['workSpaceText'] = document.getElementById('user-input').value;
     let NOE = document.getElementById('numEmployees').value;
     dataList[selectedDiv]['NOE'] = NOE;
     for (let i = 0; i < parseInt(NOE); i++) {
@@ -288,6 +288,5 @@ document.getElementById("submitButton").addEventListener("click", function (even
 
     
     </script>
-    <script  type="module" src="app.js"></script>
 </body>
 </html>

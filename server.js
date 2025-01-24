@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const API_URL = "https://api.openai.com/v1/chat/completions";
 const API_KEY = "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";
 
-// Define a function that encapsulates the call to OpenAI API
+
 const openAIRequest = async (userInput, memberData) => {
     try {
         const response = await fetch(API_URL, {
